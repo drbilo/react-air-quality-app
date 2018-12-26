@@ -1,32 +1,41 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css');
+
+body, html {
+  font-family: "Open Sans", serif;
+  font-size: 100%;
+  height: 100%;
+}
+
+
+.root {
+
+}
+
+.row {
   text-align: center;
+  padding: 10px
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.mapid {
+  height:400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.city {
+  font-size: 5vw;
 }
 
-.App-link {
-  color: #61dafb;
+.aqi {
+  font-size: 10vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aqiFace-white {
+  filter: invert(1);
+  max-width: 60%;
+  height: auto;
+}
+
+.aqiFace-black {
+  max-width: 60%;
+  height: auto;
 }
