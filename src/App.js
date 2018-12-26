@@ -42,7 +42,7 @@ class App extends Component {
       this.setState({
         city: data.data.city.name,
         aqi: data.data.aqi,
-        pm25: data.data.iaqi.pm25.v,
+        pm25: (data.data.iaqi.pm25) ? data.data.iaqi.pm25.v : 'No Data',
         pm10: (data.data.iaqi.pm10) ? data.data.iaqi.pm10.v : 'No Data',
         temp: (data.data.iaqi.t) ? data.data.iaqi.t.v + '°C' : 'No Data',
         geo: data.data.city.geo,

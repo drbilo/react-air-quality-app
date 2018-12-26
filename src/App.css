@@ -7,18 +7,13 @@ body, html {
   height: 100%;
 }
 
-
-.root {
-
-}
-
 .row {
   text-align: center;
   padding: 10px
 }
 
 .mapid {
-  height:400px;
+  height: 480px;
 }
 
 .city {
@@ -31,11 +26,11 @@ body, html {
 
 .aqiFace-white {
   filter: invert(1);
-  max-width: 60%;
+  max-width: 40%;
   height: auto;
 }
 
 .aqiFace-black {
-  max-width: 60%;
+  max-width: 40%;
   height: auto;
 }
