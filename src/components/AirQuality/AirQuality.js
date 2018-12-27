@@ -23,7 +23,7 @@ export default class AirQuality extends Component {
       <div>
         <h1>{this.props.city}</h1>
         <h1 className='aqi'>{this.props.aqi}</h1>
-        <h3>Current AQI Air Quality</h3>
+        <h3 className='subtitle'>Current AQI Air Quality</h3>
         <br />
         {this.getFace(this.props.aqi)}
       </div>

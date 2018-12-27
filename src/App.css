@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 @import url('http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body, html {
   font-family: "Open Sans", serif;
@@ -12,12 +13,12 @@ body, html {
   padding: 10px
 }
 
-.mapid {
+.mapId {
   height: 480px;
 }
 
 .city {
-  font-size: 5vw;
+  font-size: 6vw;
 }
 
 .aqi {
@@ -33,4 +34,8 @@ body, html {
 .aqiFace-black {
   max-width: 40%;
   height: auto;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
 }

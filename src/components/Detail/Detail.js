@@ -5,7 +5,7 @@ export default class Details extends Component {
     return (
       <div>
         <h1>{this.props.data}</h1>
-        <h3>{this.props.type}</h3>
+        <h3 className='subtitle'>{this.props.type}</h3>
       </div>
     )
   }

@@ -6,7 +6,7 @@ export default class MapTile extends Component<{}, State> {
     const position = this.props.geo;
     return (
       <div>
-        <Map className="mapid" center={position} zoom={this.props.zoom}>
+        <Map className="mapId" center={position} zoom={this.props.zoom}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

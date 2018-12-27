@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Titles from "./components/Titles/Titles";
+import Search from "./components/Search/Search";
 import AirQuality from "./components/AirQuality/AirQuality";
 import Map from "./components/MapTile/MapTile";
 import Detail from "./components/Detail/Detail";
@@ -16,28 +16,21 @@ class App extends Component {
     pm25: undefined,
     pm10: undefined,
     temp: undefined,
-    date: undefined,
     geo: undefined,
     zoom: 12,
-    error: undefined
   }
 
   updateState = async (e) => {
     var city = this.state.city;
+
     if (e) {
       e.preventDefault();
       city = e.target.elements.city.value;
     }
+
     const api_call = await fetch(`https://api.waqi.info/feed/${city}/?token=${API_KEY}`);
     const data = await api_call.json();
     console.log(data);
-
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() +1;
-    var yyyy = today.getFullYear();
-    var date = dd + '/' + mm + '/' + yyyy;
-
     if (data.status === "ok") {
       this.setState({
         city: data.data.city.name,
@@ -46,17 +39,15 @@ class App extends Component {
         pm10: (data.data.iaqi.pm10) ? data.data.iaqi.pm10.v : 'No Data',
         temp: (data.data.iaqi.t) ? data.data.iaqi.t.v + '°C' : 'No Data',
         geo: data.data.city.geo,
-        date: date
       });
     } else {
       this.setState({
-        city: 'No Data',
-        aqi: 'No Data',
-        pm25: 'No Data',
-        pm10: 'No Data',
-        temp: 'No Data',
+        city: 'City Not Found',
+        aqi: 0,
+        pm25: 0,
+        pm10: 0,
+        temp: 0,
         geo: [0,0],
-        date: date
       });
     }
   }
@@ -72,7 +63,7 @@ class App extends Component {
         <div className='container-fluid justify-content-center h-100'>
           <div className='row '>
             <div className='col'>
-              <Titles 
+              <Search 
                 updateState={this.updateState}
               />
             </div>
