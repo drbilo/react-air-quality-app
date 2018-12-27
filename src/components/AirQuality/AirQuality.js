@@ -10,11 +10,11 @@ export default class AirQuality extends Component {
         if (this.props.aqi <=50) {
             return <img src={good} alt='good face' className='aqiFace-white' />;
         } else if (this.props.aqi  > 50 && this.props.aqi <= 100) {
-            return <img src={moderate} alt='good face' className='aqiFace-black'/>;
+            return <img src={moderate} alt='moderate face' className='aqiFace-black'/>;
         } else if (this.props.aqi  > 100 && this.props.aqi <=150) {
-            return <img src={bad} alt='good face' className='aqiFace-white'/>;
+            return <img src={bad} alt='bad face' className='aqiFace-white'/>;
         } else if (this.props.aqi  > 150) {
-            return <img src={extreme} alt='good face' className='aqiFace-white'/>;
+            return <img src={extreme} alt='extreme face' className='aqiFace-white'/>;
         }
     };
 
